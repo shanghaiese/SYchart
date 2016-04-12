@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?izgkk0');
+    src:    url('../fonts/icomoon.eot?izgkk0#iefix') format('embedded-opentype'),
+            url('../fonts/icomoon.ttf?izgkk0') format('truetype'),
+            url('../fonts/icomoon.woff?izgkk0') format('woff'),
+            url('../fonts/icomoon.svg?izgkk0#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Locationicon:before {
+    content: "\e900";
+    color: #FFFFFF;
+    font-size: 5em;
+}
+.icon-Precipitationicon:before {
+    content: "\e901";
+    color: #66C9DE;
+    font-size: 5em;
+}
+.icon-rigntarrowicon:before {
+    content: "\e902";
+    color: #FFFFFF;
+    font-size: 5em;
+}
+.icon-Serarchicon:before {
+    content: "\e903";
+    color: #FFFFFF;
+    font-size: 2em;
+}
+.icon-Temperatureicon:before {
+    content: "\e904";
+    color: #9F040D;
+    font-size: 5em;
+}
+.icon-Windicon:before {
+    content: "\e905";
+    color: #157DA3; 
+    font-size: 5em;
+}
+

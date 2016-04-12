@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ECharts · Example</title>
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+</head>
+<body>
+    <div id="main1" style="height:250px;width:100%"></div>
+    <div id="main" style="height:400px;width:100%"></div>
+    <script type="text/javascript">
+        // configure for module loader
+        require.config({
+            paths: {
+                echarts: 'http://echarts.baidu.com/build/dist'
+            }
+        });
+
+        var option = {
+            backgroundColor: 'rgba(0,0,0,0)',
+            //tooltip: {
+            //    trigger: 'axis'
+            //},
+            legend: {
+                data: ['Pink', 'Orange', 'Green', 'Blue'],
+                color: 'auto',
+                y: 'bottom',
+            },
+            calculable: true,
+            //color: ['pink','orange','green','yellow', 'red','grey'],
+            color: ['#FDAA9C', '#FDD784', '#D5DA80', '#0503BE'],
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['Sep 2014', 'Okt 2014', 'Dez 2014', 'Jan 2015', 'Feb 2015', 'Mrz 2015',
+                    'Mai 2015', 'Jun 2015', 'Jul 2015', 'Sep 2015', 'Okt 2015', 'Nov 2015', 'Jan 2016'],
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'Wasser in mm',
+                    splitArea: { show: false }
+                }
+            ],
+            series: [
+                {
+                    name: 'Pink',
+                    type: 'line',
+                    symbol: 'none',
+                    data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
+                    itemStyle: { normal: { areaStyle: { type: 'default', color: '#FDAA9C' } } },
+                    emphasis: {
+                        labelLine: {
+                            show: true,
+                            lineStyle: { color: '#FDAA9C' }
+                        }
+                    },
+                },
+                {
+                    name: 'Orange',
+                    type: 'line',
+                    symbol: 'none',
+                    data: [80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80],
+                    itemStyle:
+                        { normal: { areaStyle: { type: 'default', color: '#FDD784' } } },
+                    emphasis: {
+                        labelLine: {
+                            show: true,
+                            lineStyle: { color: '#FDD784' }
+                        }
+                    }
+                },
+                {
+                    name: 'Green',
+                    type: 'line',
+                    symbol: 'none',
+                    data: [120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120],
+                    itemStyle:
+                        { normal: { areaStyle: { type: 'default', color: '#D5DA80' } } },
+                    emphasis: {
+                        labelLine: {
+                            show: true,
+                            lineStyle: { color: '#D5DA80' }
+                        }
+                    }
+                },
+                {
+                    name: 'Blue',
+                    type: 'line',
+                    symbol: 'circle',
+                    data: [110, 100, 115, 102, 105, 108, 105, 106, 101, 156, 111, 109],
+                    emphasis: {
+                        labelLine: {
+                            show: true,
+                            lineStyle: { color: '#0503BE', type: 'solid' }
+                        }
+                    }
+                }
+            ]
+        };
+
+        var option1 = {
+            backgroundColor: 'rgba(0,0,0,0)',
+            //tooltip: {
+            //    trigger: 'axis'
+            //},
+            legend: {
+                data: ['Triangle', 'Circle', 'Square'],
+                color: 'auto',
+                y: 'bottom',
+            },
+            calculable: true,
+            //color: ['pink','orange','green','yellow', 'red','grey'],
+            color: ['#E49B11', '#F30711', '#8B88B5'],
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['Sep 2014', 'Okt 2014', 'Dez 2014', 'Jan 2015', 'Feb 2015', 'Mrz 2015',
+                    'Mai 2015', 'Jun 2015', 'Jul 2015', 'Sep 2015', 'Okt 2015', 'Nov 2015', 'Jan 2016'],
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    //name: 'Wasser in mm',
+                    splitArea: { show: false }
+                }
+            ],
+            series: [
+                {
+                    name: 'Triangle',
+                    type: 'line',
+                    symbol: 'triangle',
+                    data: [180, 154, 168, 190, 200, 160, 187, 189, 150, 156, 182, 160],
+                    emphasis: {
+                        labelLine: {
+                            show: true,
+                            lineStyle: { color: '#E49B11', type: 'solid' }
+                        }
+                    }
+                },
+                {
+                    name: 'Circle',
+                    type: 'line',
+                    symbol: 'circle',
+                    symbol: 'image://Content/images/openlayers/Red.JPG',
+                    data: [200, 145, 178, 190, 187, 192, 150, 164, 197, 210, 181, 191],
+                    emphasis: {
+                        labelLine: {
+                            show: true,
+                            lineStyle: { color: '#F30711', type: 'solid' }
+                        }
+                    }
+                },
+                {
+                    name: 'Square',
+                    type: 'line',
+                    symbol: 'rectangle',
+                    data: [201, 205, 210, 200, 230, 134, 245, 234, 267, 229, 206, 202],
+                    emphasis: {
+                        labelLine: {
+                            show: true,
+                            lineStyle: { color: '#8B88B5', type: 'solid' }
+                        }
+                    }
+                }
+            ]
+        };
+
+        require(
+            [
+                'echarts',
+                'echarts/chart/line',
+                'echarts/chart/bar'
+            ],
+            function (ec) {
+                var myChart = ec.init(document.getElementById('main'));
+                myChart.setOption(option);
+
+                $(window).resize(function(){
+                    myChart.resize();    
+                });
+                var myChart1 = ec.init(document.getElementById('main1'));
+                myChart1.setOption(option1);
+                $(window).resize(function(){
+                    myChart1.resize();    
+                });
+            }
+        )
+    </script>
+</body>
+</html>

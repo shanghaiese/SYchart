@@ -1,0 +1,131 @@
+.bor{
+	border-bottom:1px dashed darkgray;
+	border-left:1px dashed darkgray;
+	border-right:1px dashed darkgray;
+	max-width:910px;
+	height:60px;
+	margin-top:10px;
+	} 
+span{display:block}  /*css注释说明：让span形成块 */
+
+#ag_tag table.restrictTable
+{
+	border: 1px solid #D7D2CC;
+	font-size: x-small;
+	width: 100%;
+	margin-left: 7px;
+}
+#ag_tag table.restrictTable th
+{
+	padding: 4px;
+	text-align: left;
+}
+#ag_tag table.restrictTable td
+{
+	padding: 2px 5px 2px 5px;
+}
+#ag_tag table.restrictTable td, #ag_tag table.restrictTable th
+{
+	border-right: 1px solid #C5C5A1;
+}
+#ag_tag .legendColourCell
+{
+	text-align: center;
+}
+
+#ag_tag .legendLetterCell
+{
+	text-align: center;
+	width: auto;
+}
+
+.mytableStyle{
+	border-left: 1.5px;	
+	border-left-style: solid;	
+	border-left-color: lightgrey;	
+	max-width: 318px;
+}
+
+.outsideTableStyle{
+	border-left: 1.5px;
+	border-right: 1.5px;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-left-color: lightgrey;
+	border-right-color: lightgrey;
+}
+
+.backTableLeftStyle{
+	background-color: #616161;
+	color: white;
+	text-align: right;
+	width: 200px;
+	height: 40px;
+}
+
+.backTableRightStyle{
+	background-color: #616161;
+	color: white;
+	text-align: center;
+	width: 70px;
+	height: 40px;
+}
+.notChooseTab{
+	text-align: center;
+	background-color: #616161;
+	color: white;
+	border-left: 1.5px solid #FFFFFF;
+	border-right: 1.5px solid #FFFFFF;
+}
+.isChooseTab{
+	text-align: center;
+	background-color: #D9D5D2;
+	color: #616161;
+	border-left: 1.5px solid #FFFFFF;
+	border-right: 1.5px solid #FFFFFF;
+}
+
+
+/***colin add for home page view*/
+.well {
+  border-radius: 0;
+}
+
+.titleColor {
+	background-color: #EB8200;
+}
+
+.inputBackgroundColor {
+	background-color: #FFD196;
+}
+
+.searchIconBackgroundColor {
+	background-color: #FFB45A;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 0;
+}
+
+.titleStyle {
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin-bottom: 0px; 
+}
+
+.inputFont {
+	color: #616161;
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 0.9px;
+	text-transform: uppercase;
+}
+
+.dateFont {
+	color: #424242;
+}
+
+.timeFont {
+	color: #424242;
+	font-weight: 400;
+	font-size: 18px;
+}
